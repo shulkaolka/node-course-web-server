@@ -49,6 +49,7 @@ app.get('/', (req, res) => {
     welcomeMessage: 'Welcome to my website'
   });
 });
+
  app.get('/about', (req, res) => {
    res.render('about.hbs',{
      pageTitle: 'About Page'
@@ -60,6 +61,13 @@ app.get('/', (req, res) => {
      errorMessage: 'Bad Request'
    });
  })
+
+ app.get('/projects', (req, res) => {
+   res.render('projects.hbs',{
+     pageTitle: 'Projects Page'
+   });
+ });
+
 app.listen(PORT, () => {
   console.log(`Server is up on port ${PORT}`);
 });
